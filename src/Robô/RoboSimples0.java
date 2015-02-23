@@ -27,10 +27,7 @@ public class RoboSimples0 {
       */
      RoboSimples0(String nomeRobo) {
          
-         nomeDoRobo = nomeRobo;
-         posicaoXAtual = 0;
-         posicaoYAtual = 0;
-         direcaoAtual = 'N';
+         this(nomeRobo,0,0,'N');
          
          
     }
@@ -39,21 +36,15 @@ public class RoboSimples0 {
       */
      RoboSimples0() {
          
-         nomeDoRobo = "";
-         posicaoXAtual = 0;
-         posicaoYAtual = 0;
-         direcaoAtual = 'N';
+         this("",0,0,'N');
          
     }/**
      * Metodo que faz com que o robor dê um passo;
      */
     public void move(){
         
-        if(direcaoAtual == 'N') posicaoYAtual = posicaoYAtual+1;
-        if(direcaoAtual == 'S') posicaoYAtual = posicaoYAtual-1;
-        if(direcaoAtual == 'E') posicaoXAtual = posicaoXAtual+1;
-        if(direcaoAtual == 'O') posicaoXAtual = posicaoXAtual-1;
-    
+        move(1);
+        
     }/**
      * Metodo construtor para mover o robor com a quintidade de passos
      * informada
